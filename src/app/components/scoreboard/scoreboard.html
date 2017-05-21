@@ -1,0 +1,20 @@
+<div class="rps-c-scoreboard">
+    <table>
+        <tr>
+            <td><h3>{{game.playerOne.name}}</h3></td>
+            <td><h3>{{game.playerTwo.name}}</h3></td>
+        </tr>
+
+        <tr>
+            <td><h3>{{game.playerOne.score}}</h3></td>
+            <td><h3>{{game.playerTwo.score}}</h3></td>
+        </tr>
+        <tr>
+            <td colspan="2"><h3>
+                <span *ngIf="game.lastRoundResult===0">Game Draw</span>
+                <span *ngIf="game.lastRoundResult===1">Player 1 wins</span>
+                <span *ngIf="game.lastRoundResult===2">Player 2 wins</span>
+            </h3></td>
+        </tr>
+    </table>
+</div>

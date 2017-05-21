@@ -1,0 +1,29 @@
+<div class="rps-c-game">
+    <p>Game Works!</p>
+    <button (click)="startNewGame()">Start new game</button>
+    <rps-scoreboard [game]="game"></rps-scoreboard>
+
+    <table>
+        <tr>
+            <td>
+                <rps-user-controls
+                        [player]="game.playerOne"
+                        [handArray]="game.selection"
+                        [isLoopRunning]="game.ongoingRound"
+                        (stop)="stopLoop($event)"></rps-user-controls>
+            </td>
+            <td>
+                <rps-computer-player
+                        (selected)="game.calculateResult()"
+                        [computerPlayer]="game.playerTwo"
+                        [handArray]="game.selection"
+                        [isLoopRunning]="game.ongoingRound"></rps-computer-player>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button (click)="startLoop()">Start round</button>
+            </td>
+        </tr>
+    </table>
+</div>

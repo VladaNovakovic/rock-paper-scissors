@@ -1,0 +1,4 @@
+<div class="rps-c-user-controls">
+    <h2>{{player.name}}</h2>
+    <button *ngFor="let hand of handArray" (click)="select(hand)">{{hand}}</button>
+</div>
