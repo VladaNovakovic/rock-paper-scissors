@@ -9,7 +9,6 @@ export default class Player {
     }
 
     select(selection: string) {
-        console.log('set selection');
         this.selection = selection;
     }
 

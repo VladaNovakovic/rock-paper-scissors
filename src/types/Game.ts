@@ -36,8 +36,6 @@ export default class Game {
         } else {
             this.lastRoundResult = 0;
         }
-
-        console.log(result, playerOneSelection, playerTwoSelection);
     }
 
 }
